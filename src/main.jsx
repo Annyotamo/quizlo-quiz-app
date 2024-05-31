@@ -9,6 +9,7 @@ import Quiz from "./Components/Quiz/Quiz.jsx";
 import Questions from "./Components/Quiz/Questions.jsx"
 import QuizResult from "./Components/Results/QuizResult.jsx";
 import About from "./Layout/Sections/About.jsx";
+import Contact from "./Layout/Sections/Contact.jsx";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
     {
         path: "/about",
         element: <About />
+    },
+    {
+        path: "/contact",
+        element: <Contact />
     }
 ]);
 

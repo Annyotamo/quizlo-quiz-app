@@ -12,4 +12,7 @@ export default function ConfirmSubmit({ text, url, setRedirectParams }) {
             </div>
         </div>
     )
+
 }
+
+

@@ -32,8 +32,8 @@ const Recommended = () => {
                         <div key={index}>
                             <div className="flex justify-around">
                                 {recommendedItems.slice(index * 3, index * 3 + 3).map((item, i) => (
-                                    <Link to={`/${item.id}`}>
-                                        <div key={i} className="w-[300px] h-[300px] p-4 bg-blue-200 rounded-lg"> {/* Increased height */}
+                                    <Link to={`/${item.id}`} key={i} >
+                                        <div className="w-[300px] h-[300px] p-4 bg-blue-200 rounded-lg"> {/* Increased height */}
                                             <img src={item.src} width={300} className='rounded' />
                                             <h3 className="text-xl font-semibold mt-7">{item.name}</h3>
                                             <p>{item.quote}</p>

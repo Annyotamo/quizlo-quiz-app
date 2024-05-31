@@ -51,7 +51,7 @@ export default function QuizResult() {
     }, [outcomeArray]);
 
     return (
-        <div className="bg-blue-400">
+        <div className="bg-blue-beige-gradient">
             <Navbar />
             <HeaderText title="Great Job" text="You completed the test" />
             <div className="font-poppins p-4 w-1/2 mx-auto bg-alice-white rounded-3xl mt-10">
