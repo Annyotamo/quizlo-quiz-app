@@ -2,42 +2,8 @@ import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../config/firebase";
 import { useState, useEffect } from "react";
-
-function Notification({ message, type, visible }) {
-    return (
-        <div
-            className={`fixed top-5 left-1/2 transform -translate-x-1/2 p-4 rounded shadow-lg transition-opacity duration-500 ${visible ? "opacity-100" : "opacity-0"} ${type === "success" ? "bg-green-500 text-white" : "bg-red-500 text-white"}`}
-        >
-            {message}
-        </div>
-    );
-}
-
-function LoadingSpinner() {
-    return (
-        <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div className="loader"></div>
-            <style jsx>{`
-                .loader {
-                    border: 4px solid rgba(0, 0, 0, 0.1);
-                    width: 36px;
-                    height: 36px;
-                    border-radius: 50%;
-                    border-left-color: #09f;
-                    animation: spin 1s ease infinite;
-                }
-                @keyframes spin {
-                    0% {
-                        transform: rotate(0deg);
-                    }
-                    100% {
-                        transform: rotate(360deg);
-                    }
-                }
-            `}</style>
-        </div>
-    );
-}
+import LoadingSpinner from "../display/LoadingSpinner";
+import Notification from "../display/Notification";
 
 export default function Login({ setRegister }) {
     const [inputData, setInputData] = useState({ username: "", password: "" });
