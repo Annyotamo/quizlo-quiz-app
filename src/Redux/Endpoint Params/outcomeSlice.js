@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+export const initialState = {
     "Q-0": {
         questionTag: "Q-0",
         question: "",

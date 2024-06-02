@@ -7,4 +7,11 @@ export default defineConfig({
     server: {
         port: "1707",
     },
+    build: {
+        rollupOptions: {
+            input: {
+                main: "index.html",
+            },
+        },
+    },
 });

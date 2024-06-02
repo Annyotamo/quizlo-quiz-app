@@ -1,4 +1,4 @@
-import Navbar from "../../Layout/Navbar";
+import Navbar from "../../Layout/Navbar/Navbar";
 import InputFields from "./Inputs/InputFields";
 import HeaderText from "../../Layout/Headers/HeaderText";
 

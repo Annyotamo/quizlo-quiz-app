@@ -7,20 +7,14 @@ import { Link } from 'react-router-dom';
 
 const Recommended = () => {
     const settings = {
-        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         adaptiveHeight: true,
-        appendDots: dots => (
-            <div>
-                <ul style={{ margin: '10px' }}>{dots}</ul>
-            </div>
-        ),
-        arrows: true, // Add this line to show arrows
-        prevArrow: <div className="slick-prev"><span>&lt;</span></div>, // Customize left arrow
-        nextArrow: <div className="slick-next"><span>&gt;</span></div>, // Customize right arrow
+        arrows: true,
+        prevArrow: <div className="slick-prev"><span>&lt;</span></div>,
+        nextArrow: <div className="slick-next"><span>&gt;</span></div>,
     };
 
     return (
@@ -33,7 +27,7 @@ const Recommended = () => {
                             <div className="flex justify-around">
                                 {recommendedItems.slice(index * 3, index * 3 + 3).map((item, i) => (
                                     <Link to={`/${item.id}`} key={i} >
-                                        <div className="w-[300px] h-[300px] p-4 bg-blue-200 rounded-lg"> {/* Increased height */}
+                                        <div className="lg:w-[300px] lg:h-[300px] w-[200px] h-[250px] p-4 bg-blue-200 rounded-lg"> {/* Increased height */}
                                             <img src={item.src} width={300} className='rounded' />
                                             <h3 className="text-xl font-semibold mt-7">{item.name}</h3>
                                             <p>{item.quote}</p>

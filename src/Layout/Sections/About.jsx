@@ -43,8 +43,6 @@ export default function About() {
                 <Link to="/">
                     <div className=" bg-blue-600 text-center p-3 rounded text-alice-white"><button>Go back</button></div>
                 </Link>
-
-
             </div>
         </div>
     );

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { generate } from "../../Redux/Endpoint Params/outcomeSlice";
-import QuestionButtons from "../../Utils/QuestionButtons";
 import { parseString } from "../../Helper/parseString";
 
 export default function Answers({ answers, correctAns, question, questionNumber }) {

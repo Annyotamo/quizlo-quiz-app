@@ -2,6 +2,7 @@ import QuestionButtons from "../../Utils/QuestionButtons"
 import Answers from "./Answers";
 import { shuffleArray } from "../../Helper/shuffleFunction";
 import AnsNav from "../../Layout/AnsNav";
+import Spinner from "../../Layout/display/Spinner"
 
 export default function Question({ nextHandler, prevHandler, questions, questionNumber }) {
     const currentQuestion = questions[questionNumber];
@@ -13,7 +14,7 @@ export default function Question({ nextHandler, prevHandler, questions, question
         shuffleArray(answers);
     }
 
-    if (!currentQuestion) return <div>Loading...</div>;
+    if (!currentQuestion) return <Spinner />
     return (
         <div className="bg-blue-400 min-h-screen justify-center flex-col items-center p-10">
             <AnsNav />

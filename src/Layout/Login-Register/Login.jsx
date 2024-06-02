@@ -36,15 +36,19 @@ export default function Login({ setRegister }) {
         setLoading(true);
         setNotification({ message: "", type: "" });
         try {
+
+            // retrieving email from database
             const usersCollection = collection(db, "users");
             const q = query(usersCollection, where("username", "==", inputData.username));
             const qSnap = await getDocs(q);
             let email = "";
             qSnap.forEach((doc) => email = doc.data().email);
 
+            // signing in with email
             const auth = getAuth();
             await signInWithEmailAndPassword(auth, email, inputData.password);
 
+            // setting display messages
             setNotification({ message: "Login successful!", type: "success" });
             setIsLoggedIn(true);
         } catch (error) {
@@ -94,7 +98,7 @@ export default function Login({ setRegister }) {
                         <button className="p-2 bg-blue-400 text-sm text-white rounded mt-5" onClick={() => setRegister(false)}>Register yourself</button>
                     </>
                 ) : (
-                    <div className="cool-message">
+                    <div>
                         <h1 className="text-[2rem] text-green-500">Welcome! 🎉</h1>
                         <p className="text-[1.25rem] text-green-700">You are now logged in. Enjoy your stay!</p>
                     </div>

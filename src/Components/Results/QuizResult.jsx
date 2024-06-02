@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import Navbar from "../../Layout/Navbar";
+import Navbar from "../../Layout/Navbar/Navbar.jsx";
 import { useSelector } from "react-redux";
 import HeaderText from "../../Layout/Headers/HeaderText";
 import { parseString } from "../../Helper/parseString.js";
